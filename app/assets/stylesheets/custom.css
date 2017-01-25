@@ -29,10 +29,10 @@ ul.nav.navbar-nav.navbar-right a:hover {
 	padding-top: 10px;
 	position: absolute;
 	top: 0;
-	left: 46%;
+	left: 45.5%;
 }
 .nav1 img {
-	width: 100px;
+	width: 120px;
 	height: auto;
 }
 
@@ -131,7 +131,7 @@ ul.nav.navbar-nav.navbar-right a:hover {
 	text-align: center;
 }
 .space h1 {
-
+	font-size: 30px;
 	margin-bottom: 40px;
 }
 form#new_user.new_user {
@@ -159,7 +159,13 @@ footer.page-footer {
 	background-color: #083F80 !important;
 }
 
-
+.logform {
+	width: auto;
+	height: auto;
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
 
 
 
