@@ -16,49 +16,75 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   </head>
-
   <body id="overrides">
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      </ul>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <% unless current_user %>
-          <%= link_to "Sign Up", new_user_registration_path %>
-          <%= link_to "Log In", new_user_session_path %>
-          <%= link_to "Log in with Facebook", user_facebook_omniauth_authorize_path %>
-        <% else %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-  <div class="nav1">
-    <%= image_tag("redslogo.png") %>
-  </div>
-
+          <ul class="nav navbar-nav navbar-right">
+            <% unless current_user %>
+              <%= link_to "Sign Up", new_user_registration_path %>
+              <%= link_to "Log In", new_user_session_path %>
+              <%= link_to "Log in with Facebook", user_facebook_omniauth_authorize_path %>
+            <% else %>
+              <%= link_to "Settings", edit_user_registration_path %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+            <% end %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <a href="/">
+      <div class="nav1">
+        <%= image_tag("redslogo.png") %>
+      </div>
+    </a>
    		<p class="notice"><%= notice %></p>
     	<p class="alert"><%= alert %></p>
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
     <%= yield %>
-    
-    <div class="footer">
+
+<!--     <div class="footer">
       <p>&copy 2017 Redmond's Barber Shop All Rights Reserved</p>
-    </div>
+    </div> -->
+            <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Redmond's Barbershop</h5>
+                <p class="grey-text text-lighten-4">159 800 S, Salt Lake City, UT 84111</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Social Media</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/redmondsbabershopUT/">facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">instagram</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">youtube</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            <p>&copy 2017 Redmond's Barber Shop All Rights Reserved</p>
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
   </body>
 </html>
