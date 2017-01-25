@@ -1,12 +1,20 @@
-  <div class="bckgrnd1">
-    <%= image_tag("backgroundshop.png") %>
-  </div>
-  <div class="form">
-	<% unless current_user %>
-		<%= link_to "Sign Up", new_user_registration_path %>
-		<%= link_to "Log In", new_user_session_path %>
-		<%= link_to "Log in with Facebook", user_facebook_omniauth_authorize_path %>
-	<% else %>
-		<%= link_to "Log out", destroy_user_session_path, method: :delete %>
-	<% end %>
-  </div>
+<div class="bckgrnd1">
+	<%= image_tag("backgroundshop.png") %>
+</div>
+<div class="bluecircle">
+	<p>Quick & Easy Sign Up!</p>
+</div>
+<div class="bluecircle1">
+	<p>Schedule, Pay, & Tip Online!</p>
+</div>
+<div class="bluecircle2">
+	<p>Save time! Reserve your spot!</p>
+</div>
+<div class="space">
+	<h1>Book With Us Now!</h1>
+	<a href="">
+		<div class="btn">
+			Check Openings
+		</div>
+	</a>
+</div>
