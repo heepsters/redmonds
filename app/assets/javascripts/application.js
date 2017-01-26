@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.min
+$(document).on('turbolinks:load',function (){
+AOS.init({
+	  duration: 1500,
+	})
+});
+
